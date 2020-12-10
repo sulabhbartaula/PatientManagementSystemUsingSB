@@ -1,8 +1,17 @@
 package com.sulabh.pms.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Patient {
 
+    @Id
     private long patientId;
+
     private String patientName;
     private String description;
     //private String xrayImageUrl;
